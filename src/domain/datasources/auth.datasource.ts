@@ -1,3 +1,4 @@
+import { LoginUserDto } from "../dtos/auth/login-user.dto";
 import { RegisterUserDto } from "../dtos/auth/register-user.dto";
 import { UserEntity } from "../entities/user.entity";
 
@@ -6,7 +7,7 @@ import { UserEntity } from "../entities/user.entity";
 // Estos reciben un metodo, que debe recibir el Dto y regresar una entidad
 export abstract class AuthDataSource {
   // todo:
-  // abstract login(loginUserDto: LoginUserDto): Promise<UserEntity>
+  abstract login(loginUserDto: LoginUserDto): Promise<UserEntity>;
 
   abstract register(registerUserDto: RegisterUserDto): Promise<UserEntity>;
 }
